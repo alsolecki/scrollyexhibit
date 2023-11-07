@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  color: white;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.stepbox {
+  border: yellow 6px solid;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  color: white;
+}
+
+.stepbox:last-child {
+  margin-bottom: 30rem;
+}
+
+.projectLine {
+  color: white;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  border: lightskyblue 3px solid;
+}
+
+  /* 
+  ********THREE JS CANVAS 
+  */
+  canvas {
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  body {
+    margin: 0;
+  }
+  
+  /* //////END THREE JS CANVAS */
