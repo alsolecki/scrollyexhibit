@@ -4,7 +4,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 extend({ OrbitControls })
 
-export default function Experience() {
+export default function Experience( { boxColor }) {
 
     const { camera, gl } = useThree()
 
@@ -13,6 +13,7 @@ export default function Experience() {
     useFrame((state, delta) => {
         //called on each frame before rendering
         cubeRef.current.rotation.y += delta * 0.25;
+        cubeRef.current.rotation.x += delta * 0.25;
         // groupRef.current.rotation.y += delta;
         // console.log('tick');
     })
@@ -30,12 +31,13 @@ export default function Experience() {
         <orbitControls args={[camera, gl.domElement]} />
 
         <mesh ref={cubeRef} rotation-y={Math.PI * 0.25} 
-                position-x={0} 
+                position-x={2}
+                position-y={1}
+                position-z={-2}
                 scale={3.0}>
                 <boxGeometry />
-                <meshStandardMaterial color="mediumpurple" />
+                <meshStandardMaterial color={boxColor} />
             </mesh>
-
 
         {/* <group ref={groupRef} rotation-y={-Math.PI * 0.05}>
             <mesh position-x={- 2}>

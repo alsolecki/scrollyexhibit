@@ -26,30 +26,11 @@
     margin: 0px auto;
     line-height: 3em;
   }
-
   
   .content img {
     margin-left: 10px;
     -webkit-filter: invert(.9);
     filter: invert(.9);
   }
-  
-  /* CONTACT FIELD */
-  
-  .footer {
-    display: block;
-    min-height: 120px;
-    color: var(--grey-color);
-    margin: 0 auto;
-    padding: 8rem 1rem 4rem;
-    line-height: 1.25em;
-    max-width: 800px;
-    width: 100vw;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.65);
-  }
-  
-  .footer h4 {
-    text-align: center;
-  }
+
   

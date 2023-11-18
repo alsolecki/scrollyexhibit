@@ -16,6 +16,7 @@ import bluegrass05 from "./bluegrass05.jpg";
 const ScrollProject2 = () => {
     const [currentStepIndex, setCurrentStepIndex] = useState(null);
     const [currentImage, setCurrentImage] = useState(bluegrass01);
+    const [boxColor, setBoxColor] = useState('white');
 
 
     // This callback fires when a Step hits the offset threshold. It receives the
@@ -24,32 +25,34 @@ const ScrollProject2 = () => {
         setCurrentStepIndex(data);
         if (data === 1) {
             setCurrentImage(bluegrass01);
+            setBoxColor('red');
         } else if (data === 2) {
             setCurrentImage(bluegrass02);
+            setBoxColor('orange');
         } else if (data === 3) {
             setCurrentImage(bluegrass03);
+            setBoxColor('yellow');
         } else if (data === 4) {
             setCurrentImage(bluegrass04);
+            setBoxColor('green');
+        } else if (data === 5) {
+            setCurrentImage(bluegrass01);
+            setBoxColor('blue');
+        } else if (data === 6) {
+            setBoxColor('mediumpurple');
+            setCurrentImage(bluegrass02);
         }
     };
 
     return (
-        <div style={{ margin: '60vh 0 60vh', border: '2px dashed skyblue' }}>
-            <div style={{
-                position: 'sticky',
-                top: "25vh",
-                border: '10px solid orchid',
-                height: "60vh",
-                background: `url(${currentImage})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                zIndex: -1,
-                transition: "0.5s"
+        <div>
+            <div className="img-box"
+                style={{background: `url(${currentImage})`
             }}>
 
-            <h1 style={{color: "white"}}>Hello!</h1>
+            <h1 style={{color: "lime"}}>Hello!</h1>
             <Canvas>
-                <Experience />
+                <Experience boxColor={boxColor} />
             </Canvas>
 
                 I'm sticky. The current triggered step index is: {currentStepIndex}
@@ -138,6 +141,9 @@ const ScrollProject2 = () => {
                 <ProjectLine title="National Hip Hop Hall of Fame" location="New York, NY" />
                 <ProjectLine title="Walter J. Brown Media Archive & Peabody Collection " location="University of Georgia" />
                 <ProjectLine title="Reynolds Coliseum" location="North Carolina State University" />
+                <ProjectLine title="" location="" />
+                <ProjectLine title="" location="" />
+                <ProjectLine title="" location="" />
 
             </Scrollama>
 

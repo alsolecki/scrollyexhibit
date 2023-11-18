@@ -26,17 +26,31 @@
   border: lightskyblue 3px solid;
 }
 
-  /* 
+.img-box {
+  border: orangered 12px solid;
+  position: sticky;
+  top: 25vh;
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transition: 0.5s;
+  margin: 60vh 0 60vh
+}
+
+/* 
   ********THREE JS CANVAS 
   */
-  canvas {
-    position: static;
-    top: 0;
-    left: 0;
-    z-index: -2;
-  }
-  body {
-    margin: 0;
-  }
-  
-  /* //////END THREE JS CANVAS */
+canvas {
+  position: static;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+body {
+  margin: 0;
+}
+
+/* //////END THREE JS CANVAS */
